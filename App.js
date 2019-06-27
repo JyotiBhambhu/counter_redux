@@ -9,7 +9,9 @@
 import React, {Component} from 'react';
 import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import {connect} from 'react-redux';
-import {counterClear, counterDecrement, counterIncrement, counterSet, helloBtnPressed} from "./redux/actions";
+import {ThunkDispatch} from "redux-thunk";
+import {clear, decrement, increment, set} from "./redux/thunk/counter.thunk";
+import {hello} from "./redux/thunk/hello.thunk";
 
 
 type Props = {};
@@ -18,7 +20,7 @@ class App extends Component<Props> {
 
     render() {
         console.log(this.props);
-        const { helloText, loading, btnPressed } = this.props.hello;
+        const {helloText, loading, btnPressed} = this.props.helloState;
         return (
 
             <View style={styles.verticalContainer}>
@@ -34,8 +36,8 @@ class App extends Component<Props> {
                 </View>
                 <Button title="Clear" onPress={this.props.counterClear}/>
                 <Text style={styles.text}>{helloText}</Text>
-                <Text style={styles.text}>Did you presses the button: {btnPressed.toString()}</Text>
-                <Button title="Show me some magic!" onPress={this.props.helloBtnPressed}/>
+                <Text style={styles.text}>Did you presses the button: {btnPressed}</Text>
+                <Button title="Show me some magic!" onPress={this.props.hello}/>
             </View>
         );
     }
@@ -82,9 +84,22 @@ const styles = StyleSheet.create({
 function mapStateToProps(state) {
     return {
         count: state.counter.count,
-        hello: state.hello
+        helloState: state.hello
     }
 }
 
+const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
 
-export default connect(mapStateToProps, {counterIncrement, counterDecrement, counterClear, counterSet, helloBtnPressed})(App);
+    counterIncrement: () => dispatch(increment()),
+    counterDecrement: () => dispatch(decrement()),
+    counterClear: () => dispatch(clear()),
+    counterSet: (params: string) => dispatch(set(params)),
+
+    hello: () => dispatch(hello())
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+// export default connect(mapStateToProps, {counterIncrement, counterDecrement, counterClear, counterSet, helloBtnPressed})(App);
