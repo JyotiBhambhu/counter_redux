@@ -1,4 +1,9 @@
 {
+
+  "expo": {
+    "sdkVersion": "27.0.0",
+    "appKey": "counter_redux"
+  },
   "name": "counter_redux",
   "displayName": "counter_redux"
 }

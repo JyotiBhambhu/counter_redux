@@ -1,10 +1,11 @@
 import reduxThunk from 'redux-thunk'
 import {applyMiddleware, createStore} from "redux";
-import reducers from '../reducers'
+import reducers from '../reducers';
+import {createLogger} from 'redux-logger';
 
 
 let middleware: any = [reduxThunk];
-// if(__DEV__){
+// if (__DEV__) {
 //     const loggerMiddleware = createLogger();
 //     middleware = [...middleware, loggerMiddleware];
 // }

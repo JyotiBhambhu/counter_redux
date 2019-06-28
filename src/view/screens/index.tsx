@@ -1,10 +1,10 @@
 import {Navigation} from "react-native-navigation";
 import {SCREENS} from "../../constants/screen";
-import Splash from "./splash";
-import SignIn from "./signin";
-import SignUp from "./signup";
-import Home from "./home";
-import Setting from "./settings";
+import * as Splash from "./splash";
+import * as SignIn from "./signin";
+import * as SignUp from "./signup";
+import * as Home from "./home";
+import * as Setting from "./settings";
 
 /**
  * ToDo: recurryinhg function used here, need to explore more, why it is used
@@ -40,11 +40,19 @@ const registerComponentWithRedux = (redux: any) => (
 
 
 export function registerScreens(redux: any) {
-    console.log(redux);
+    console.warn(redux);
     registerComponentWithRedux(redux)(SCREENS.Splash, Splash.default);
     registerComponentWithRedux(redux)(SCREENS.SignIn, SignIn.default);
     registerComponentWithRedux(redux)(SCREENS.SignUp, SignUp.default);
     registerComponentWithRedux(redux)(SCREENS.Home, Home.default);
     registerComponentWithRedux(redux)(SCREENS.Settings, Setting.default);
-console.log('redux end');
+    console.warn('redux end');
 }
+
+// export function registerScreens() {
+//     Navigation.registerComponent(SCREENS.Splash, () => Splash.default);
+//     Navigation.registerComponent(SCREENS.SignIn, () => SignIn.default);
+//     Navigation.registerComponent(SCREENS.SignUp, () => SignUp.default);
+//     Navigation.registerComponent(SCREENS.Home, () => Home.default);
+//     Navigation.registerComponent(SCREENS.Settings, () => Setting.default);
+// }

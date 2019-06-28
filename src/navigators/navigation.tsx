@@ -26,7 +26,7 @@ export const goToAuth = () => {
                                     text: 'Sign In',
                                     textColor: TYPOGRAPHY.COLOR.Primary,
                                     selectedTextColor: TYPOGRAPHY.COLOR.Secondary,
-                                    icon: require('../view/assets/images/tabbar/signin.png'),
+                                    // icon: require('../view/assets/images/tabbar/signin.png'),
                                 }
                             }
                         }
@@ -40,7 +40,7 @@ export const goToAuth = () => {
                                     text: 'Sign Up',
                                     textColor: TYPOGRAPHY.COLOR.Primary,
                                     selectedTextColor: TYPOGRAPHY.COLOR.Secondary,
-                                    icon: require('../view/assets/images/tabbar/signup.png'),
+                                    // icon: require('../view/assets/images/tabbar/signup.png'),
                                 }
                             }
                         }
@@ -81,8 +81,8 @@ export const goToHome = () => {
                                     text: 'Home',
                                     textColor: TYPOGRAPHY.COLOR.Primary,
                                     selectedTextColor: TYPOGRAPHY.COLOR.Secondary,
-                                    icon: require('../view/assets/images/tabbar/home.png'),
-                                    selectedIcon: require('../view/assets/images/tabbar/home.png'),
+                                    // icon: require('../view/assets/images/tabbar/home.png'),
+                                    // selectedIcon: require('../view/assets/images/tabbar/home.png'),
                                 }
                             }
                         }
@@ -107,8 +107,8 @@ export const goToHome = () => {
                                     fontSize: 12,
                                     textColor: TYPOGRAPHY.COLOR.Primary,
                                     selectedTextColor: TYPOGRAPHY.COLOR.Secondary,
-                                    icon: require('../view/assets/images/tabbar/settings.png'),
-                                    selectedIcon: require('../view/assets/images/tabbar/settings.png')
+                                    // icon: require('../view/assets/images/tabbar/settings.png'),
+                                    // selectedIcon: require('../view/assets/images/tabbar/settings.png')
                                 }
                             }
                         }

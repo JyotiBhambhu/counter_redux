@@ -17,7 +17,7 @@ class Splash extends React.PureComponent<Props, State> {
 
     constructor(props: Props) {
         super(props);
-        this.state = {};
+        // this.state = {};
     }
 
     async componentDidMount() {
@@ -42,11 +42,11 @@ class Splash extends React.PureComponent<Props, State> {
                     <Image
                         style={styles.image}
                         resizeMode='contain'
-                        source={require('../../assets/images/rnn2.png')}
+                        // source={require('../../assets/images/rnn2.png')}
                     />
                     <Image
                         resizeMode='center'
-                        source={require('../../assets/images/rn_ts.png')}
+                        // source={require('../../assets/images/rn_ts.png')}
                     />
                     <BUTTON_DEFAULT
                         title="Continue To App"
