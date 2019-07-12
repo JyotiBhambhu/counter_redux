@@ -46,7 +46,6 @@ export function registerScreens(redux: any) {
     registerComponentWithRedux(redux)(SCREENS.SignUp, SignUp.default);
     registerComponentWithRedux(redux)(SCREENS.Home, Home.default);
     registerComponentWithRedux(redux)(SCREENS.Settings, Setting.default);
-    console.warn('redux end');
 }
 
 // export function registerScreens() {

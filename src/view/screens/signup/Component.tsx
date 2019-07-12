@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {View} from 'react-native';
 
 export interface Props {
 
@@ -15,9 +16,8 @@ class SignUp extends React.PureComponent<Props, State> {
     }
 
     render() {
-        return;
+        return(<View/>)
     }
-
 }
 
 export default SignUp;

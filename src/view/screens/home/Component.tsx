@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {View} from 'react-native';
 
 export interface Props {
 
@@ -15,7 +16,7 @@ class Home extends React.PureComponent<Props, State> {
     }
 
     render() {
-        return;
+        return(<View/>)
     }
 
 }
